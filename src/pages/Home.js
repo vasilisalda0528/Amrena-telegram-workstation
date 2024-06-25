@@ -1,4 +1,10 @@
-import { useEffect, useState } from "react";
+
+import React, { useEffect, useState,  } from "react";
+
+import {  
+  
+  // useNavigation 
+} from "react-router-dom";
 
 import "./styles.css";
 // import vase from "../assets/images/Homepage/vase.png";
@@ -8,50 +14,58 @@ import scroll from "../assets/images/Homepage/quest.png";
 import detail from "../assets/svg/temp.svg";
 import Btn from "../components/Btn";
 
-
-const FirstPage = () => {
+function FirstPage (props) {
   const [holdClick, setHoldClick] = useState(false);
-  const [droped,setDroped] = useState(false)
+  const [droped, setDroped] = useState(false);
+  // const [goEarn, setGoEarn] = useState(false);
   let retrieveDrop;
   let temp, retrieveHold;
   const static_vases = [
-    <div className="vase-img-small" style={{left:'90px'}}></div>,
-    <div className="vase-img-big" style={{left:'175px'}}></div>,
-    <div className="vase-img-small" style={{left:'270px'}}></div>,
+    <div className="vase-img-small" style={{ left: "90px" }}></div>,
+    <div className="vase-img-big" style={{ left: "175px" }}></div>,
+    <div className="vase-img-small" style={{ left: "270px" }}></div>
     // <img src={vase} className="vase-img-big" style={{left:'175px'}}/>,
     // <img src={vase} className="vase-img-small" style={{left:'270px'}}/>,
-  ]
+  ];
   const dynamic_vases = [
-    <div className="vase-img-small" style={{left:'90px'}} id="cup_1"></div>,
-    <div className="vase-img-big" style={{left:'175px'}} id="cup_2"></div>,
-    <div className="vase-img-small" style={{left:'270px'}} id="cup_3"></div>,
+    <div className="vase-img-small" style={{ left: "90px" }} id="cup_1"></div>,
+    <div className="vase-img-big" style={{ left: "175px" }} id="cup_2"></div>,
+    <div className="vase-img-small" style={{ left: "270px" }} id="cup_3"></div>
     // <img src={vase} className="vase-img-big" style={{left:'180px'}} id="cup_animation_1"/>,
     // <img src={vase} className="vase-img-small" style={{left:'270px'}} id="cup_animation_1"/>,
-  ]
- const init = () =>{
-  return static_vases.map(vase => vase)
- }
- const move = () => {
-  return dynamic_vases.map(vase=>vase)
- }
- const handle = () => {
-  if(droped){
-    clearTimeout(retrieveDrop)
-    temp = move();
-    retrieveHold = setTimeout(()=>setHoldClick(false),1000)
-    retrieveDrop = setTimeout(()=>setDroped(false),1000)
-  }
-  else{
-    clearTimeout(retrieveHold)
-    clearTimeout(retrieveDrop)
-    temp = init();
-    
-  }
-  return temp;
- }
- useEffect(()=>{ if(holdClick)retrieveDrop = setTimeout(()=>setDroped(true),2500)},[holdClick])
- useEffect(()=>{if(droped){ retrieveHold = setTimeout(()=>setHoldClick(false),1000)
-  retrieveDrop = setTimeout(()=>setDroped(false),1000)}},[droped])
+  ];
+  const init = () => {
+    return static_vases.map((vase) => vase);
+  };
+  const move = () => {
+    return dynamic_vases.map((vase) => vase);
+  };
+  const handle = () => {
+    if (droped) {
+      clearTimeout(retrieveDrop);
+      temp = move();
+      retrieveHold = setTimeout(() => setHoldClick(false), 1000);
+      retrieveDrop = setTimeout(() => setDroped(false), 1000);
+    } else {
+      clearTimeout(retrieveHold);
+      clearTimeout(retrieveDrop);
+      temp = init();
+    }
+    return temp;
+  };
+
+  
+
+  useEffect(() => {
+  console.log('input params:->', props);
+    if (holdClick) retrieveDrop = setTimeout(() => setDroped(true), 2500);
+  }, [holdClick]);
+  useEffect(() => {
+    if (droped) {
+      retrieveHold = setTimeout(() => setHoldClick(false), 1000);
+      retrieveDrop = setTimeout(() => setDroped(false), 1000);
+    }
+  }, [droped]);
   return (
     <div className="home">
       <div className="topbar">
@@ -75,7 +89,7 @@ const FirstPage = () => {
         </div>
       </div>
       <div className="panel">
-        <Btn title="Earn" />
+        <Btn title="Earn" url='/earn' />
         <div className="panel-score">
           <img src={amar_token} className="panel-score-img" />
           <div className="panel-score-text">4.999.999</div>
@@ -83,16 +97,13 @@ const FirstPage = () => {
         <Btn title="Wallet" />
       </div>
       <div className="hide">
-        <img
-          className="hide-img"
-          src={Hide}
-          onClick={!holdClick?()=>setHoldClick(true):null}
-        />
+        <img className="hide-img" src={Hide} onClick={!holdClick ? () => setHoldClick(true) : null} />
       </div>
       <div className="coin" style={{ animation: holdClick ? "coin_down 2s backwards" : "" }}>
         <div id="coin"></div>
       </div>
-       {droped?handle():init()}
+      {droped ? handle() : init()}
+      {/* {goEarn ? (<Link to="/earn" />) : <></>} */}
     </div>
   );
 };

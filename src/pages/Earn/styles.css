@@ -1,0 +1,37 @@
+.earn{
+    height: 100vh;
+    background-color: black;
+}
+.picture{
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.picture-token-img{
+    z-index: 1;
+}
+.picture-flash{
+    width: 200px;
+    height: 200px;
+    border-radius: 100px;
+    background-color: yellow;
+    background: -webkit-linear-gradient(#fff3bf,#fff3bf,#fff3bf,#fff3bf,#ffd93a,#ffd93a,#ffd93a,#ffd93a);
+    /* background: -webkit-linear-gradient(#fff3bf,#ffd93a); */
+    background-clip:padding-box;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    position:absolute;
+    top:20%;
+    left:30%;
+    z-index: 0;
+}
+.description{
+    height: 10%;
+    text-align: center;
+    color:white;
+}
+.item-list{
+    height: 40%;
+}
