@@ -1,0 +1,56 @@
+@font-face {
+    font-family: 'MyriadPro-Bold';
+    src: url(../assets/Font/Myriad_Pro/MyriadPro-Bold.otf);
+}
+.temp-div {
+    background-image: url('../assets/images/Homepage/btns.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width:80px;
+    height:60px;
+    font-weight: bold;
+    font-family: 'MyriadPro-Bold';
+}
+
+#cup_animation_1 {
+    animation: cup_animation1 0.5s 5 forwards;
+}
+
+#cup_animation_2 {
+    
+}
+
+#cup_animation_3 {
+
+}
+
+@keyframes cup_animation1 {
+    10% {
+        left: 50px;
+    }
+    20%{
+        left:300px
+    }
+    30% {
+        left: 50px;
+    }
+    40%{
+        left:300px
+    }
+    50%{
+        left:50px
+    }
+    60%{
+        left: 300px;
+    }
+    70%{
+        left:50px
+    }
+    80%{
+        left:300px
+    }
+}
