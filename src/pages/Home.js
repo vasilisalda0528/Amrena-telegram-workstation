@@ -1,22 +1,32 @@
+import { useEffect, useState } from "react";
+
 import "./styles.css";
-import vase from "../assets/images/Homepage/vase.png";
-import scroll from "../assets/images/Homepage/quest.png";
+// import vase from "../assets/images/Homepage/vase.png";
 import amar_token from "../assets/images/Homepage/amarIcon.png";
-import Btn from "../components/Btn";
-import detail from "../assets/svg/temp.svg";
 import Hide from "../assets/images/Homepage/logo.png";
-import { useState } from "react";
+import scroll from "../assets/images/Homepage/quest.png";
+import detail from "../assets/svg/temp.svg";
+import Btn from "../components/Btn";
+
+
 const FirstPage = () => {
-  const [holdClick, setHoldClick] = useState(false)
+  const [holdClick, setHoldClick] = useState(false);
+  const [droped,setDroped] = useState(false)
+  let retrieveDrop;
+  let temp, retrieveHold;
   const static_vases = [
-    <img src={vase} className="vase-img-small" style={{left:'90px'}}/>,
-    <img src={vase} className="vase-img-small" style={{left:'180px'}}/>,
-    <img src={vase} className="vase-img-small" style={{left:'270px'}}/>,
+    <div className="vase-img-small" style={{left:'90px'}}></div>,
+    <div className="vase-img-big" style={{left:'175px'}}></div>,
+    <div className="vase-img-small" style={{left:'270px'}}></div>,
+    // <img src={vase} className="vase-img-big" style={{left:'175px'}}/>,
+    // <img src={vase} className="vase-img-small" style={{left:'270px'}}/>,
   ]
   const dynamic_vases = [
-    <img src={vase} className="vase-img-small" style={{left:'90px'}} id="cup_animation_1"/>,
-    <img src={vase} className="vase-img-small" style={{left:'180px'}} id="cup_animation_1"/>,
-    <img src={vase} className="vase-img-small" style={{left:'270px'}} id="cup_animation_1"/>,
+    <div className="vase-img-small" style={{left:'90px'}} id="cup_1"></div>,
+    <div className="vase-img-big" style={{left:'175px'}} id="cup_2"></div>,
+    <div className="vase-img-small" style={{left:'270px'}} id="cup_3"></div>,
+    // <img src={vase} className="vase-img-big" style={{left:'180px'}} id="cup_animation_1"/>,
+    // <img src={vase} className="vase-img-small" style={{left:'270px'}} id="cup_animation_1"/>,
   ]
  const init = () =>{
   return static_vases.map(vase => vase)
@@ -25,17 +35,23 @@ const FirstPage = () => {
   return dynamic_vases.map(vase=>vase)
  }
  const handle = () => {
-  let temp, retrieve;
-  if(holdClick){
+  if(droped){
+    clearTimeout(retrieveDrop)
     temp = move();
-    retrieve = setTimeout(()=>setHoldClick(false),1000)
+    retrieveHold = setTimeout(()=>setHoldClick(false),1000)
+    retrieveDrop = setTimeout(()=>setDroped(false),1000)
   }
   else{
-    clearTimeout(retrieve)
+    clearTimeout(retrieveHold)
+    clearTimeout(retrieveDrop)
     temp = init();
+    
   }
   return temp;
  }
+ useEffect(()=>{ if(holdClick)retrieveDrop = setTimeout(()=>setDroped(true),2500)},[holdClick])
+ useEffect(()=>{if(droped){ retrieveHold = setTimeout(()=>setHoldClick(false),1000)
+  retrieveDrop = setTimeout(()=>setDroped(false),1000)}},[droped])
   return (
     <div className="home">
       <div className="topbar">
@@ -62,7 +78,7 @@ const FirstPage = () => {
         <Btn title="Earn" />
         <div className="panel-score">
           <img src={amar_token} className="panel-score-img" />
-          <div className="panel-score-text">4,999,999</div>
+          <div className="panel-score-text">4.999.999</div>
         </div>
         <Btn title="Wallet" />
       </div>
@@ -70,13 +86,13 @@ const FirstPage = () => {
         <img
           className="hide-img"
           src={Hide}
-          onClick={()=>setHoldClick(true)}
+          onClick={!holdClick?()=>setHoldClick(true):null}
         />
       </div>
-      {/* <div className="coin" style={{ animation: hide_flag ? "coin_down 2s backwards" : "" }}>
+      <div className="coin" style={{ animation: holdClick ? "coin_down 2s backwards" : "" }}>
         <div id="coin"></div>
-      </div> */}
-       {handle()}
+      </div>
+       {droped?handle():init()}
     </div>
   );
 };

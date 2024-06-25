@@ -123,16 +123,20 @@
 }
 .vase-img-big{
     position: absolute;
-    width:105px;
-    height:175px;
-    bottom: 70px;
+    width:95px;
+    height:170px;
+    bottom: 75px;
+    background-image: url(../assets/images/Homepage/vase.png);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
 }
 .vase-img-small{
     position:absolute;
     margin-bottom:10px;
     width:85px;
     height:150px;
-    bottom: 70px;
+    bottom: 75px;
     background-image: url(../assets/images/Homepage/vase.png);
     background-position: center;
     background-size: contain;
@@ -188,52 +192,69 @@
 @keyframes coin_down {
     from {
         bottom: 400px;
-        transform: rotateX(0);
+        /* transform: rotateX(0); */
     }
     to {
-        bottom: 50px;
-        transform: rotateX(360deg);
+        bottom: 150px;
+        /* transform: rotateX(360deg); */
     }
 }
 
-#cup_animation_1 {
-    animation: cup_animation1 0.5s 1 forwards;
-}
 
-#cup_animation_2 {
-    
-}
+#cup_1 {
+    animation: cup_animation_1 0.4s infinite forwards;
+  }
 
-#cup_animation_3 {
+  @keyframes cup_animation_1 {
+    0% {
+    }
 
-}
+    33% {
+      transform: translate3d(90px, 5px, 10px) scale(1.1);
+    }
 
-@keyframes cup_animation1 {
-    10% {
-        left: 100px;
+    66% {
+      transform: translate3d(180px, 0px, 0px);
     }
-    20%{
-        left:120px
+
+    100% {
     }
-    30% {
-        left:270px;
+  }
+  #cup_2 {
+    animation: cup_animation_2 0.4s infinite forwards;
+  }
+
+  @keyframes cup_animation_2 {
+    0% {
     }
-    40%{
-        left:100px
+
+    33% {
+      transform: translate3d(90px, 0px, 10px) scale(0.9);
     }
-    50%{
-        left:270px
+
+    66% {
+      transform: translate3d(-90px, 0px, 0px) scale(0.9);
     }
-    60%{
-        left: 100px;
+
+    100% {
     }
-    70%{
-        left:270px
+  }
+  #cup_3 {
+    animation: cup_animation_3 0.4s infinite forwards;
+  }
+
+  @keyframes cup_animation_3 {
+    0% {
     }
-    80%{
-        left:100px
+
+    33% {
+      transform: translate3d(-180px, 0px, 0px);
     }
-    100%{
-        left:180px
+
+    66% {
+      transform: translate3d(-90px, 5px, 5px) scale(1.1);
     }
-}
+
+    100% {
+    }
+  }
