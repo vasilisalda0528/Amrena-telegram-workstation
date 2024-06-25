@@ -195,67 +195,45 @@
         transform: rotateX(360deg);
     }
 }
-@keyframes vase_left_to_right {
-    from {
-        left: 90px;
-        
-    }
-    to {
-        left: 150px;
-    }
-}
-@keyframes vase_left_to_mid {
-    from {
-        left: 90px;
-        
-    }
-    to {
-        left: 120px;
-        
 
-    }
+#cup_animation_1 {
+    animation: cup_animation1 0.5s 1 forwards;
 }
-@keyframes vase_mid_to_right {
-    from {
-        left: 120px;
-        
-    }
-    to {
-        left: 150px;
-        
 
-    }
+#cup_animation_2 {
+    
 }
-@keyframes vase_mid_to_left {
-    from {
-        left: 120px;
-        
-    }
-    to {
-        left: 90px;
-        
 
-    }
+#cup_animation_3 {
+
 }
-@keyframes vase_right_to_left {
-    from {
-        left: 150px;
-        
-    }
-    to {
-        left: 90px;
-        
 
+@keyframes cup_animation1 {
+    10% {
+        left: 100px;
     }
-}
-@keyframes vase_right_to_mid {
-    from {
-        left: 150px;
-        
+    20%{
+        left:120px
     }
-    to {
-        left: 120px;
-        
-
+    30% {
+        left:270px;
+    }
+    40%{
+        left:100px
+    }
+    50%{
+        left:270px
+    }
+    60%{
+        left: 100px;
+    }
+    70%{
+        left:270px
+    }
+    80%{
+        left:100px
+    }
+    100%{
+        left:180px
     }
 }

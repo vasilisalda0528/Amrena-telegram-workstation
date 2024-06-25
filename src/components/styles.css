@@ -30,27 +30,27 @@
 
 @keyframes cup_animation1 {
     10% {
-        left: 50px;
+        left: 90px;
     }
     20%{
-        left:300px
+        left:120px
     }
     30% {
-        left: 50px;
+        left:270px;
     }
     40%{
-        left:300px
+        left:100px
     }
     50%{
-        left:50px
+        left:270px
     }
     60%{
-        left: 300px;
+        left: 90px;
     }
     70%{
-        left:50px
+        left:270px
     }
     80%{
-        left:300px
+        left:90px
     }
 }

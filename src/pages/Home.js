@@ -1,16 +1,41 @@
 import "./styles.css";
-// import vase from "../assets/images/Homepage/vase.png";
+import vase from "../assets/images/Homepage/vase.png";
 import scroll from "../assets/images/Homepage/quest.png";
 import amar_token from "../assets/images/Homepage/amarIcon.png";
 import Btn from "../components/Btn";
 import detail from "../assets/svg/temp.svg";
 import Hide from "../assets/images/Homepage/logo.png";
-import useShellGame from "hooks/useShellGame";
-import Cup from "components/Cup";
+import { useState } from "react";
 const FirstPage = () => {
-  const {  shuffle, userChoice,  status, cups } = useShellGame();
- 
-console.log(cups, 'cups');
+  const [holdClick, setHoldClick] = useState(false)
+  const static_vases = [
+    <img src={vase} className="vase-img-small" style={{left:'90px'}}/>,
+    <img src={vase} className="vase-img-small" style={{left:'180px'}}/>,
+    <img src={vase} className="vase-img-small" style={{left:'270px'}}/>,
+  ]
+  const dynamic_vases = [
+    <img src={vase} className="vase-img-small" style={{left:'90px'}} id="cup_animation_1"/>,
+    <img src={vase} className="vase-img-small" style={{left:'180px'}} id="cup_animation_1"/>,
+    <img src={vase} className="vase-img-small" style={{left:'270px'}} id="cup_animation_1"/>,
+  ]
+ const init = () =>{
+  return static_vases.map(vase => vase)
+ }
+ const move = () => {
+  return dynamic_vases.map(vase=>vase)
+ }
+ const handle = () => {
+  let temp, retrieve;
+  if(holdClick){
+    temp = move();
+    retrieve = setTimeout(()=>setHoldClick(false),1000)
+  }
+  else{
+    clearTimeout(retrieve)
+    temp = init();
+  }
+  return temp;
+ }
   return (
     <div className="home">
       <div className="topbar">
@@ -45,21 +70,13 @@ console.log(cups, 'cups');
         <img
           className="hide-img"
           src={Hide}
-          onClick={shuffle}
+          onClick={()=>setHoldClick(true)}
         />
       </div>
       {/* <div className="coin" style={{ animation: hide_flag ? "coin_down 2s backwards" : "" }}>
         <div id="coin"></div>
       </div> */}
-        {cups.map((cup, index) => (
-            <Cup
-              key={index}
-              cup={cup}
-              status={status}
-              userChoice={userChoice}
-              animation={index}
-            />
-          ))}
+       {handle()}
     </div>
   );
 };
