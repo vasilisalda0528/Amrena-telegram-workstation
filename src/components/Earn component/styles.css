@@ -1,28 +1,74 @@
 .item{
     width: 90%;
-    height: 50px;
+    height: 70px;
     display: flex;
     margin:5px 5px 5px 5px;
 }
-.item > div {
+/* .item  div {
     border: solid;
-}
+} */
 .item-img-box{
     width: 20%;
+    border-radius:1.5rem 0 0 1.5rem;
 }
 .item-info{
     width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
 }
 .item-info-title{
     color:white;
 }
 .item-info-detail{
+    width: 100%;
     color:white;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.item-info-detail-coin{
+    background-image: url(../../assets/images/Homepage/coin.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    width: 25px;
+    height: 25px;
+}
+.item-info-detail-text{
+    width: 50%;
 }
 .item-link-box{
     width: 20%;
+    border-radius:0 1.5rem 1.5rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.right-arrow{
+    width: 50%;
+    height: 50%;
+    background-image: url(../../assets/svg/right-arrow-3094.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
 }
 .item-bg{
     background-color: gray;
     opacity: 80%;
+}
+.item-list{
+    width: 100%;
+    height: 50%;
+}
+.item-list-part{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.item-list-part-description{
+    color:white;
+    margin: 10px 10px 10px 40px;
+    font-size: x-large;
 }

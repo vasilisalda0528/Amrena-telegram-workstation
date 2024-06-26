@@ -20,13 +20,6 @@
     animation: cup_animation1 0.5s 5 forwards;
 }
 
-#cup_animation_2 {
-    
-}
-
-#cup_animation_3 {
-
-}
 
 @keyframes cup_animation1 {
     10% {

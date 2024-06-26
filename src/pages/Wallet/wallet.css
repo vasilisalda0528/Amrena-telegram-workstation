@@ -1,0 +1,54 @@
+.wallet{
+    height: 100vh;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.wallet-picture{
+    height: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.wallet-picture-token-img{
+    width: 350px;
+    height: 350px;
+    border-radius: 200px;
+    background-image: radial-gradient(circle,#fff3bf, #ecd17f,  #53430A, #000000, #000000, #000000);
+    position:absolute;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.wallet-description{
+    height: 10%;
+    text-align: center;
+    color:white;
+}
+.wallet-item-list{
+    flex-direction: column;
+    width: 80%;
+    height: 50%;
+    display: flex;
+}
+.wallet-item-list-part{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.wallet-item-list-part-description{
+    color:white;
+    margin: 10px 10px 10px 40px;
+    font-size: x-large;
+}
+.wallet-item-list-check{
+    background-image: url(../../assets/images/Homepage/check.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    width: 50px;
+    height: 50px;
+}

@@ -23,15 +23,11 @@ function FirstPage(props) {
     <div className="vase-img-small" style={{ left: "90px" }}></div>,
     <div className="vase-img-big" style={{ left: "175px" }}></div>,
     <div className="vase-img-small" style={{ left: "270px" }}></div>
-    // <img src={vase} className="vase-img-big" style={{left:'175px'}}/>,
-    // <img src={vase} className="vase-img-small" style={{left:'270px'}}/>,
   ];
   const dynamic_vases = [
     <div className="vase-img-small" style={{ left: "90px" }} id="cup_1"></div>,
     <div className="vase-img-big" style={{ left: "175px" }} id="cup_2"></div>,
     <div className="vase-img-small" style={{ left: "270px" }} id="cup_3"></div>
-    // <img src={vase} className="vase-img-big" style={{left:'180px'}} id="cup_animation_1"/>,
-    // <img src={vase} className="vase-img-small" style={{left:'270px'}} id="cup_animation_1"/>,
   ];
   const init = () => {
     return static_vases.map((vase) => vase);

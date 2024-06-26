@@ -3,19 +3,19 @@ import Itempack from 'components/Earn component/ItemPack';
 
 import tokenImg from '../../assets/images/Homepage/amarIcon.png'
 
-import './styles.css'
+import './earn.css'
 
 const Earn =() =>{
 return <div className='earn'>
-    <div className='picture'>
-        <div className='picture-token-img'>
+    <div className='earn-picture'>
+        <div className='earn-picture-token-img'>
             <img src={tokenImg}/>
         </div>
     </div>
-    <div className='description'>
+    <div className='earn-description'>
         Hello. Wellcome to here!!
     </div>
-    <div className='item-list'>
+    <div className='earn-item-list'>
         <Itempack/>
         <Itempack/>
     </div>
