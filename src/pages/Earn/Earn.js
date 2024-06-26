@@ -4,9 +4,11 @@ import Itempack from 'components/Earn component/ItemPack';
 import tokenImg from '../../assets/images/Homepage/amarIcon.png'
 
 import './earn.css'
+import BackButton from 'pages/Topbar/topbar';
 
 const Earn =() =>{
 return <div className='earn'>
+    
     <div className='earn-picture'>
         <div className='earn-picture-token-img'>
             <img src={tokenImg}/>
@@ -19,7 +21,7 @@ return <div className='earn'>
         <Itempack/>
         <Itempack/>
     </div>
-
+    <BackButton/>
 </div>
 }
 

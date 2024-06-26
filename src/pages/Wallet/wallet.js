@@ -1,3 +1,4 @@
+import BackButton from "pages/Topbar/topbar";
 import icon from "../../assets/images/Homepage/icon1024V3.png";
 import binance from "../../assets/svg/binance.svg"
 
@@ -34,6 +35,7 @@ const Wallet = () => {
             <div className="wallet-item-list-check"></div>
         </div>
       </div>
+      <BackButton/>
     </div>
   );
 };

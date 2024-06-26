@@ -61,16 +61,7 @@ function FirstPage(props) {
   }, [droped]);
   return (
     <div className="home">
-      {/* <div className="topbar">
-        <div className="topbar-cancel">Cancel</div>
-        <div className="topbar-title">
-          <div className="topbar-title-amarna">Amarna</div>
-          <div>Bot</div>
-        </div>
-        <div className="topbar-detail">
-          <img src={detail} style={{ width: "28px", height: "28px" }} />
-        </div>
-      </div> */}
+      
       <div className="info">
         <div className="info-avatar">
           <div className="info-avatar-imgbox"></div>
