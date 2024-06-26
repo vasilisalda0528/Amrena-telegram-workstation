@@ -5,14 +5,15 @@
 .home{
     display: flex;
     flex-direction: column;
-    height: 880px;
-    width:460px;
-    background-image: url(../assets/images/Homepage/amarnaBotTelegramMiniGameHomepage.png);
-    background-size:contain;
-    background-repeat: no-repeat;
-    background-position: center;
+    /* height: 880px;
+    width:460px; */
+    width: 100%;
+    height: 98.2vh;
+    background-image: linear-gradient(180deg, #000000,#1b0a02,#2c0f02,#3e1503, #642002,#642002,#642002,#642002,#642002);
     position: relative;
+    min-width: 360px;
 }
+
 /* .home div{
     border-style: solid;
 } */
@@ -46,7 +47,7 @@
 .info{
     display: flex;
     justify-content: space-around;
-    height: 13%;
+    height: 15%;
     margin: 0px 20px 0px 20px;
 }
 .info-avatar{
@@ -71,12 +72,13 @@
     position: relative;
     display: flex;
     align-items: center;
+    justify-content: flex-end;
 }
 .info-quest-img{
     width: 40px;
     height: 40px;
     position: absolute;
-    left: 0;
+    left: -25px;
 }
 .info-quest-text{
     border-radius: 5px;
@@ -90,7 +92,27 @@
     background-color: #464646;
     color: white;
 }
+.mask{
+    width: 100%;
+    height: 90%;
+    /* margin-top: 20%; */
+    background-color: black;
+    border-radius: 2rem 2rem 0 0;
+    border-top-color: #b93224;
+    border-top-style: solid;
+    /* background: linear-gradient(to bottom, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.1)); */
+    /* , url('your-image.jpg'); */
+    /* background-size: cover;
+    background-blend-mode: overlay; */
+    background: linear-gradient(to bottom, rgba(18, 18, 18, 1),rgba(18, 18, 18, 1),rgba(18, 18, 18, 1), rgba(255, 255, 255, 0));
+    display: flex;
+    flex-direction: column;
 
+    min-width: 360px;
+}
+.mask > div,img{
+    z-index: 1;
+}
 .hide{
     display: flex;
     justify-content: center;
@@ -104,39 +126,48 @@
     width: 60%;
 }
 .hide-img{
-    height: 70%;
-    width: 60%;
+    height: 220px;
+    width: 320px;
     opacity: 1;
 }
+.background{
+    width: 100%;
+    height: 60%;
+    position: absolute;
+    background-image: linear-gradient(to bottom, rgba(18, 18, 18, 1), rgba(18, 18, 18, 0.4),rgba(18, 18, 18, 0.3),rgba(18, 18, 18, 0.2),rgba(18, 18, 18, 0),rgb(54, 51, 51,0), rgba(255, 255, 255, 0)),url(../assets/images/Homepage/background.png);
+    background-repeat: no-repeat;
+    background-size: contain,100% 100%;
+    bottom: 0;
+    z-index: 0;
+    
+}
 .vase{
-        position: absolute;
-        display:flex;
-        justify-content : center;
-        height : 20%;
-        align-items: last baseline  ;
-        bottom: 70px;
-        left: 90px;
-        /* background-image: url(../assets/images/Homepage/gameBackground.jpg);
-        background-size:cover;
-        background-repeat: no-repeat;
-        background-position: center; */
+        display: flex;
+        width: auto;
+        justify-content: center;
+        align-items: flex-end;
+        height: 80%;
+        z-index: 1;
+}
+.vase-coin{
+    height: 80%;
 }
 .vase-img-big{
-    position: absolute;
+    /* position: absolute; */
     width:95px;
     height:170px;
-    bottom: 75px;
+    /* bottom: 75px; */
     background-image: url(../assets/images/Homepage/vase.png);
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
 }
 .vase-img-small{
-    position:absolute;
+    /* position:absolute; */
     margin-bottom:10px;
     width:85px;
     height:150px;
-    bottom: 75px;
+    /* bottom: 75px; */
     background-image: url(../assets/images/Homepage/vase.png);
     background-position: center;
     background-size: contain;
@@ -144,14 +175,15 @@
 }
 .panel{
     display:flex;
-    justify-content : space-around;
+    justify-content : space-between;
     align-items: center;
     height : 10%;
+    margin: 0px 10px 0px 10px;
 }
 .panel-score{
     display: flex;
     width: 50%;
-    justify-content: space-between;
+    justify-content: center;
 }
 .panel-score-img{
     width:45px;
@@ -159,6 +191,7 @@
 }
 .panel-score-text{
     height:50px;
+    margin-left: 20px;
     font-size: 38px;
     font-weight:bolder;
     font-family: 'MyriadPro-Bold';
@@ -175,9 +208,11 @@
 .coin{
     height: 10%;
     position: absolute;
-    bottom:400px;
-    left:215px;
+    bottom:500px;
+    left:48%;
+    right: 48%;
     z-index: 0;
+    opacity: 0;
 }
 #coin {
     background-image: url(../assets/images/Homepage/amarIcon.png);
@@ -187,15 +222,29 @@
     width: 20px;
     height: 30px;
 }
+.human{
+    position: absolute;
+    left: 0;
+    width: 200px;
+    height: 400px;
+}
+.dog{
+    position: absolute;
+    right: 0;
+    width: 180px;
+    height: 350px;
+}
 
 
 @keyframes coin_down {
     from {
         bottom: 400px;
+        opacity: 1;
         /* transform: rotateX(0); */
     }
     to {
-        bottom: 150px;
+        opacity: 0;
+        bottom: 180px;
         /* transform: rotateX(360deg); */
     }
 }
@@ -210,11 +259,13 @@
     }
 
     33% {
-      transform: translate3d(90px, 5px, 10px) scale(1.1);
+        filter: blur(5px);
+        transform: translate3d(90px, 5px, 10px) scale(1.1);
     }
 
     66% {
-      transform: translate3d(180px, 0px, 0px);
+        filter: blur(0px);
+        transform: translate3d(180px, 0px, 0px);
     }
 
     100% {
@@ -229,11 +280,13 @@
     }
 
     33% {
-      transform: translate3d(90px, 0px, 10px) scale(0.9);
+        filter: blur(5px);
+        transform: translate3d(90px, 0px, 10px) scale(0.9);
     }
 
     66% {
-      transform: translate3d(-90px, 0px, 0px) scale(0.9);
+        filter: blur(0px);
+        transform: translate3d(-90px, 0px, 0px) scale(0.9);
     }
 
     100% {
@@ -248,11 +301,13 @@
     }
 
     33% {
-      transform: translate3d(-180px, 0px, 0px);
+        filter: blur(5px);
+        transform: translate3d(-180px, 0px, 0px);
     }
 
     66% {
-      transform: translate3d(-90px, 5px, 5px) scale(1.1);
+        filter: blur(0px);
+        transform: translate3d(-90px, 5px, 5px) scale(1.1);
     }
 
     100% {
