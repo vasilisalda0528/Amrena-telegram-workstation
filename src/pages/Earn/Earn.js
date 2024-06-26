@@ -1,5 +1,5 @@
 
-import Itemview from 'components/Earn component/Itemview';
+import Itempack from 'components/Earn component/ItemPack';
 
 import tokenImg from '../../assets/images/Homepage/amarIcon.png'
 
@@ -8,7 +8,6 @@ import './styles.css'
 const Earn =() =>{
 return <div className='earn'>
     <div className='picture'>
-        <div className='picture-flash'></div>
         <div className='picture-token-img'>
             <img src={tokenImg}/>
         </div>
@@ -17,12 +16,8 @@ return <div className='earn'>
         Hello. Wellcome to here!!
     </div>
     <div className='item-list'>
-        <div className='item-list-part1'>
-
-        </div>
-        <div className='item-list-part2'>
-            <Itemview detailInfo="hey you what's up" titleInfo="quest"/>
-        </div>
+        <Itempack/>
+        <Itempack/>
     </div>
 
 </div>

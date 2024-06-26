@@ -1,10 +1,8 @@
 .item{
-    width: 100%;
+    width: 90%;
     height: 50px;
-    background-color: gray;
-    opacity: 80%;
-    border-radius: 10%;
     display: flex;
+    margin:5px 5px 5px 5px;
 }
 .item > div {
     border: solid;
@@ -23,4 +21,8 @@
 }
 .item-link-box{
     width: 20%;
+}
+.item-bg{
+    background-color: gray;
+    opacity: 80%;
 }
