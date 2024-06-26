@@ -30,7 +30,7 @@
 }
 .wallet-item-list{
     flex-direction: column;
-    width: 80%;
+    width: 90%;
     height: 50%;
     display: flex;
 }
