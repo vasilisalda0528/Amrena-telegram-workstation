@@ -15,35 +15,21 @@
     font-weight: bold;
     font-family: 'MyriadPro-Bold';
 }
-
-#cup_animation_1 {
-    animation: cup_animation1 0.5s 5 forwards;
+@media screen and (max-width: 519px) {
+.temp-div {
+    background-image: url('../assets/images/Homepage/btns.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height:45px;
+    font-weight: bold;
+    font-family: 'MyriadPro-Bold';
 }
-
-
-@keyframes cup_animation1 {
-    10% {
-        left: 90px;
-    }
-    20%{
-        left:120px
-    }
-    30% {
-        left:270px;
-    }
-    40%{
-        left:100px
-    }
-    50%{
-        left:270px
-    }
-    60%{
-        left: 90px;
-    }
-    70%{
-        left:270px
-    }
-    80%{
-        left:90px
-    }
+.btn-font{
+    font-size: 8px;
+}
 }

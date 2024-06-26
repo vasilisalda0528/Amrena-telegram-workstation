@@ -8,7 +8,7 @@ const Wallet = () => {
     <div className="wallet">
       <div className="wallet-picture">
         <div className="wallet-picture-token-img">
-          <img src={icon} style={{ width: "150px", height: "150px", borderRadius: "6rem" }} />
+          <img className="wallet-token-img" src={icon}/>
         </div>
       </div>
       <div className="wallet-description">
@@ -30,7 +30,7 @@ const Wallet = () => {
         </div>
         <div style={{ borderRadius: "1.5rem", backgroundColor: "#efb83e", width: "100 %", height: "80px", display:'flex', justifyContent:'space-around',alignItems:'center' }}>
             <div><img src={binance} style={{width:'50px',height:'50px'}}/></div>
-            <div style={{color:'white',fontSize:'30px',display:'flex',alignItems:'center'}}>Connect your BSC wallet</div>
+            <div className="wallet-task-list-text">Connect your BSC wallet</div>
             <div className="wallet-item-list-check"></div>
         </div>
       </div>

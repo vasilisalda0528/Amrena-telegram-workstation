@@ -10,8 +10,8 @@
     justify-content: center;
 }
 .splash-logo{
-    width: 400px;
-    height: 250px;
+    width: 250px;
+    height: 150px;
     background-image: url(../../assets/images/Homepage/amarnaLogo.png);
     background-position: center;
     background-repeat: no-repeat;

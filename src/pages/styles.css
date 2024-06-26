@@ -2,6 +2,10 @@
     font-family: 'MyriadPro-Bold';
     src: url(../assets/Font/Myriad_Pro/MyriadPro-Bold.otf);
 }
+/* @font-face {
+    font-family: 'MyriadPro-Bold';
+    src: url(../assets/Font/Myriad_Pro/MyriadPro-Bold.otf);
+} */
 .home{
     display: flex;
     flex-direction: column;
@@ -203,6 +207,20 @@
     -webkit-text-fill-color: transparent;
     /* color: #ffd93a; */
 }
+
+.temp-div {
+    background-image: url('../assets/images/Homepage/btns.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width:80px;
+    height:60px;
+    font-weight: bold;
+    font-family: 'MyriadPro-Bold';
+}
 /* .coin:start
 */
 
@@ -315,3 +333,163 @@
     100% {
     }
   }
+  @media screen and (max-width: 519px) {
+    .panel-score-img{
+        width:20px;
+        height:25px;
+    }
+    .panel-score-text{
+        height:25px;
+        margin-left: 10px;
+        font-size: 25px;
+        font-weight:bolder;
+        font-family: 'MyriadPro-Bold';
+        background: -webkit-linear-gradient(#fff3bf,#fff3bf,#fff3bf,#fff3bf,#ffd93a,#ffd93a,#ffd93a,#ffd93a);
+        /* background: -webkit-linear-gradient(#fff3bf,#ffd93a); */
+        background-clip:padding-box;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        /* color: #ffd93a; */
+    }
+    .panel{
+        display:flex;
+        justify-content : space-between;
+        align-items: center;
+        height : 15%;
+        margin: 0px 20px 0px 20px;
+    }
+  }
+  @media screen and (max-height: 577px) {
+    /* Define styles for screens with a maximum width of 768px */
+    .hide-img{
+        height: 150px;
+        width: 230px;
+        opacity: 1;
+    }
+    .vase-img-big{
+        /* position: absolute; */
+        width:55px;
+        height:130px;
+        /* bottom: 75px; */
+        background-image: url(../assets/images/Homepage/vase.png);
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+    .vase-img-small{
+        /* position:absolute; */
+        margin-bottom:10px;
+        width:45px;
+        height:110px;
+        /* bottom: 75px; */
+        background-image: url(../assets/images/Homepage/vase.png);
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+    #cup_1 {
+        animation: cup_animation_1 0.4s infinite forwards;
+      }
+    
+      @keyframes cup_animation_1 {
+        0% {
+        }
+    
+        33% {
+            filter: blur(5px);
+            transform: translate3d(50px, 5px, 10px) scale(1.3);
+        }
+    
+        66% {
+            filter: blur(0px);
+            transform: translate3d(100px, 0px, 0px);
+        }
+    
+        100% {
+        }
+      }
+       #cup_2 {
+        animation: cup_animation_2 0.4s infinite forwards;
+      } 
+    
+       @keyframes cup_animation_2 {
+        0% {
+        }
+    
+        33% {
+            filter: blur(5px);
+            transform: translate3d(50px, 0px, 10px) scale(0.9);
+        }
+    
+        66% {
+            filter: blur(0px);
+            transform: translate3d(-60px, 0px, 0px) scale(0.9);
+        }
+    
+        100% {
+        }
+      }
+      #cup_3 {
+        animation: cup_animation_3 0.4s infinite forwards;
+      }
+    
+      @keyframes cup_animation_3 {
+        0% {
+        }
+    
+        33% {
+            filter: blur(5px);
+            transform: translate3d(-100px, 0px, 0px);
+        }
+    
+        66% {
+            filter: blur(0px);
+            transform: translate3d(-50px, 5px, 5px) scale(1.3);
+        }
+    
+        100% {
+        }
+      }
+      .coin{
+        height: 5%;
+        position: absolute;
+        bottom:200px;
+        left:48%;
+        right: 48%;
+        z-index: 0;
+        opacity: 0;
+    }
+    #coin {
+        background-image: url(../assets/images/Homepage/amarIcon.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        width: 10px;
+        height: 20px;
+    } 
+    @keyframes coin_down {
+        from {
+            bottom: 200px;
+            opacity: 1;
+            /* transform: rotateX(0); */
+        }
+        to {
+            opacity: 0;
+            bottom: 140px;
+            /* transform: rotateX(360deg); */
+        }
+    }
+    .info-quest-text{
+        border-radius: 5px;
+        display: flex;
+        align-items: center;
+        height: 35%;
+        font-size: 10px;
+        margin-left:20px;
+        padding-left: 10px;
+        padding-right : 5px;
+        background-color: #464646;
+        color: white;
+    }
+  }
+  
