@@ -366,6 +366,14 @@
         width: 230px;
         opacity: 1;
     }
+    .vase{
+        display: flex;
+        width: auto;
+        justify-content: center;
+        align-items: flex-end;
+        height: 90%;
+        z-index: 1;
+}
     .vase-img-big{
         /* position: absolute; */
         width:55px;

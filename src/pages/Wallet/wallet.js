@@ -29,7 +29,7 @@ const Wallet = () => {
           Task List
         </div>
         <div style={{ borderRadius: "1.5rem", backgroundColor: "#efb83e", width: "100 %", height: "80px", display:'flex', justifyContent:'space-around',alignItems:'center' }}>
-            <div><img src={binance} style={{width:'50px',height:'50px'}}/></div>
+            <div><img className="wallet-binance" src={binance} /></div>
             <div className="wallet-task-list-text">Connect your BSC wallet</div>
             <div className="wallet-item-list-check"></div>
         </div>

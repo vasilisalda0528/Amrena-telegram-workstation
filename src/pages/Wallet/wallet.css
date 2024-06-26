@@ -63,6 +63,10 @@
     display:flex;
     align-items:center;
 }
+.wallet-binance{
+    width:50px;
+    height:50px;
+}
 @media screen and (max-height: 755px) {
     .wallet-picture-token-img{
         width: 200px;
@@ -91,8 +95,20 @@
 @media screen and (max-width: 525px) {
     .wallet-task-list-text{
         color:white;
-        font-size:20px;
+        font-size:17px;
         display:flex;
         align-items:center;
+    }
+    .wallet-binance{
+        width:30px;
+        height:30px;
+    }
+    .wallet-item-list-check{
+        background-image: url(../../assets/images/Homepage/check.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+        width: 30px;
+        height: 30px;
     }
 }
