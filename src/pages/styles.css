@@ -16,6 +16,7 @@
     background-image: linear-gradient(180deg, #000000,#1b0a02,#2c0f02,#3e1503, #642002,#642002,#642002,#642002,#642002);
     position: relative;
     min-width: 360px;
+    min-height: 750px;
 }
 
 /* .home div{
@@ -123,7 +124,7 @@
     /* margin-top:20px; */
     justify-content: center;
     align-items: center;
-    height : 45%;
+    height : 50%;
     z-index: 1;
 }
 .hide-img:active{
@@ -152,7 +153,7 @@
         width: auto;
         justify-content: center;
         align-items: flex-end;
-        height: 80%;
+        height: 75%;
         z-index: 1;
 }
 .vase-coin{
@@ -167,6 +168,7 @@
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
+    z-index: 1;
 }
 .vase-img-small{
     /* position:absolute; */
@@ -178,6 +180,7 @@
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
+    z-index: 1;
 }
 .panel{
     display:flex;
@@ -228,7 +231,7 @@
 .coin{
     height: 10%;
     position: absolute;
-    bottom:500px;
+    bottom:40%;
     left:48%;
     right: 48%;
     z-index: 0;
@@ -259,13 +262,13 @@
 
 @keyframes coin_down {
     from {
-        bottom: 400px;
+        bottom: 40%;
         opacity: 1;
         /* transform: rotateX(0); */
     }
     to {
         opacity: 0;
-        bottom: 180px;
+        bottom: 10%;
         /* transform: rotateX(360deg); */
     }
 }
@@ -360,150 +363,5 @@
         margin: 0px 20px 0px 20px;
     }
   }
-  @media screen and (max-height: 577px) {
-    /* Define styles for screens with a maximum width of 768px */
-    .hide-img{
-        height: 120px;
-        width: 180px;
-        opacity: 1;
-    }
-    .vase{
-        display: flex;
-        width: auto;
-        justify-content: center;
-        align-items: flex-end;
-        height: 84%;
-        z-index: 1;
-}
-    .vase-img-big{
-        /* position: absolute; */
-        width:65px;
-        height:150px;
-        /* bottom: 75px; */
-        background-image: url(../assets/images/Homepage/vase.png);
-        background-position: center;
-        background-size: contain;
-        background-repeat: no-repeat;
-    }
-    .vase-img-small{
-        /* position:absolute; */
-        margin-bottom:10px;
-        width:55px;
-        height:130px;
-        /* bottom: 75px; */
-        background-image: url(../assets/images/Homepage/vase.png);
-        background-position: center;
-        background-size: contain;
-        background-repeat: no-repeat;
-    }
-    #cup_1 {
-        animation: cup_animation_1 0.5s forwards;
-      }
-    
-      @keyframes cup_animation_1 {
-        0% {
-        }
-    
-        33% {
-            filter: blur(5px);
-            transform: translate3d(50px, 5px, 10px) scale(1.2);
-        }
-    
-        66% {
-            filter: blur(4px);
-            transform: translate3d(100px, 0px, 0px);
-        }
-    
-        100% {
-        }
-      }
-       #cup_2 {
-        animation: cup_animation_2 0.5s  forwards;
-      } 
-    
-       @keyframes cup_animation_2 {
-        0% {
-        }
-    
-        33% {
-            filter: blur(5px);
-            transform: translate3d(50px, 0px, 10px) scale(0.9);
-        }
-    
-        66% {
-            filter: blur(4px);
-            transform: translate3d(-60px, 0px, 0px) scale(0.9);
-        }
-    
-        100% {
-        }
-      }
-      #cup_3 {
-        animation: cup_animation_3 0.5s  forwards;
-      }
-    
-      @keyframes cup_animation_3 {
-        0% {
-        }
-    
-        33% {
-            filter: blur(5px);
-            transform: translate3d(-100px, 0px, 0px);
-        }
-    
-        66% {
-            filter: blur(4px);
-            transform: translate3d(-50px, 5px, 5px) scale(1.2);
-        }
-    
-        100% {
-        }
-      }
-      .coin{
-        height: 5%;
-        position: absolute;
-        bottom:200px;
-        left:48%;
-        right: 48%;
-        z-index: 0;
-        opacity: 0;
-    }
-    #coin {
-        background-image: url(../assets/images/Homepage/amarIcon.png);
-        background-size: contain;
-        background-repeat: no-repeat;
-        background-position: center;
-        width: 10px;
-        height: 20px;
-    } 
-    @keyframes coin_down {
-        from {
-            bottom: 250px;
-            opacity: 1;
-            /* transform: rotateX(0); */
-        }
-        to {
-            opacity: 0;
-            bottom: 140px;
-            /* transform: rotateX(360deg); */
-        }
-    }
-    .info-quest-text{
-        border-radius: 5px;
-        display: flex;
-        align-items: center;
-        height: 35%;
-        font-size: 10px;
-        margin-left:20px;
-        padding-left: 10px;
-        padding-right : 5px;
-        background-color: #464646;
-        color: white;
-    }
-    .hide-img:active{
-        opacity: 0.8;
-        height: 70%;
-        width: 50%;
-    }
-  }
+  
   

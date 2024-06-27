@@ -1,20 +1,22 @@
 
 import './styles.css'
 
-const Itemview = ({pimg,titleInfo,detailInfo}) =>{
-    return <div className="item">
-        <div className="item-img-box item-bg">
-            <img className="item-img" src={pimg}/>
+const Itemview = ({headImg,description,tailImg,itemColor}) =>{
+    return <div className="item" style={{backgroundColor:itemColor,borderRadius:'1.5rem'}}>
+        <div className='item-img-box'>
+            <img className="item-img" src={headImg}/>
         </div>
-        <div className="item-info item-bg">
-            <div className="item-info-title">{titleInfo}</div>
+        <div className="item-info"  style={{backgroundColor:itemColor}}>
+            {/* <div className="item-info-title">{titleInfo}</div>
             <div className="item-info-detail">
                 <div className='item-info-detail-coin'></div>
                 <div className='item-info-detail-text'>{detailInfo}</div>
-            </div>
+            </div> */}
+            {description()}
         </div>
-        <div className="item-link-box item-bg">
-            <div className='right-arrow'></div>
+        <div className="item-link-box"  style={{backgroundColor:itemColor}}>
+            {/* <div className='right-arrow'></div> */}
+            <img className="right-arrow" src={tailImg}/>
         </div>
     </div>
 }

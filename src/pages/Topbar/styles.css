@@ -1,9 +1,10 @@
 .back-button {
-    background-color: gray;
-    background-image: url(../../assets/images/Homepage/goback.png);
+    background-color: black;
+    background-image: url(../../assets/svg/right-arrow-3094.svg);
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
+    transform: scaleX(-1);
     border-radius: 2rem;
     border: none;
     color: white;
@@ -16,7 +17,7 @@
     cursor: pointer;
     position: absolute;
     top: 30px;
-    left : 30px;
+    left : 40px;
   }
   
   .back-button:hover {

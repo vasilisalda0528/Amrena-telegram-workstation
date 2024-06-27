@@ -33,6 +33,8 @@
     width: 90%;
     height: 50%;
     display: flex;
+    color: white;
+    justify-content: center;
 }
 .wallet-item-list-part{
     display: flex;
@@ -41,11 +43,12 @@
 }
 .connect-btn{
     border-radius: 1.5rem;
+    padding : 5px 0 5px 0;
     background-color: #efb83e;
     width: 100%;
     height: 80px;
     display:flex;
-    justify-content:space-around;
+    justify-content:space-between;
     align-items:center; 
 }
 .wallet-item-list-part-description{
@@ -53,19 +56,20 @@
     margin: 10px 10px 10px 40px;
     font-size: x-large;
 }
-.wallet-item-list-check{
-    background-image: url(../../assets/images/Homepage/check.png);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
-    width: 50px;
-    height: 50px;
-}
 .wallet-token-img{
     width: 150px;
     height: 150px;
     border-radius: 6rem; 
 }
+.wallet-item-list-check{
+    background-image: url(../../assets/images/Homepage/check.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    width: 40px;
+    height: 40px;
+}
+
 .wallet-task-list-text{
     color:white;
     font-size:30px;
@@ -73,8 +77,15 @@
     align-items:center;
 }
 .wallet-binance{
-    width:50px;
-    height:50px;
+    width:40px;
+    height:40px;
+}
+.item-list-part{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
 }
 @media screen and (max-height: 755px) {
     .wallet-picture-token-img{
@@ -99,6 +110,7 @@
         width: 90%;
         height: 50%;
         display: flex;
+        justify-content: flex-start;
     }
     .connect-btn{
         border-radius: 1rem;
@@ -108,6 +120,9 @@
         display:flex;
         justify-content:space-around;
         align-items:center; 
+    }
+    .connect-btn :hover{
+        background-color: #eea70e;
     }
 }
 @media screen and (max-width: 525px) {
