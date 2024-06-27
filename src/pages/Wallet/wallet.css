@@ -39,6 +39,15 @@
     flex-direction: column;
     align-items: center;
 }
+.connect-btn{
+    border-radius: 1.5rem;
+    background-color: #efb83e;
+    width: 100%;
+    height: 80px;
+    display:flex;
+    justify-content:space-around;
+    align-items:center; 
+}
 .wallet-item-list-part-description{
     color:white;
     margin: 10px 10px 10px 40px;
@@ -90,6 +99,15 @@
         width: 90%;
         height: 50%;
         display: flex;
+    }
+    .connect-btn{
+        border-radius: 1rem;
+        background-color: #efb83e;
+        width: 100%;
+        height: 50px;
+        display:flex;
+        justify-content:space-around;
+        align-items:center; 
     }
 }
 @media screen and (max-width: 525px) {
