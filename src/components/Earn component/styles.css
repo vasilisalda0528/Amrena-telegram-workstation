@@ -14,6 +14,10 @@
     justify-content: center;
     align-items: center;
 }
+.item-img{
+    width: 50px;
+    height: 50px;
+}
 .item-info{
     width: 60%;
     display: flex;
@@ -73,4 +77,20 @@
     color:white;
     margin: 10px 0px 10px 0px;
     font-size: x-large;
+}
+
+
+@media screen and (max-width:500px){
+    .item-info{
+        width: 60%;
+        font-size: 15px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+    }
+    .item-img{
+        width: 30px;
+        height: 30px;
+    }
 }

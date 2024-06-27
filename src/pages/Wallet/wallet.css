@@ -1,74 +1,4 @@
-.wallet{
-    height: 100vh;
-    background-color: black;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-.wallet-picture{
-    height: 40%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-}
-.wallet-picture-token-img{
-    width: 300px;
-    height: 300px;
-    border-radius: 200px;
-    background-image: radial-gradient(circle,#fff3bf, #ecd17f,  #53430A, #000000, #000000, #000000);
-    position:absolute;
-    z-index: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.wallet-description{
-    height: 10%;
-    text-align: center;
-    color:white;
-}
-.wallet-item-list{
-    flex-direction: column;
-    width: 90%;
-    height: 50%;
-    display: flex;
-    color: white;
-    justify-content: center;
-}
-.wallet-item-list-part{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-.connect-btn{
-    border-radius: 1.5rem;
-    padding : 5px 0 5px 0;
-    background-color: #efb83e;
-    width: 100%;
-    height: 80px;
-    display:flex;
-    justify-content:space-between;
-    align-items:center; 
-}
-.wallet-item-list-part-description{
-    color:white;
-    margin: 10px 10px 10px 40px;
-    font-size: x-large;
-}
-.wallet-token-img{
-    width: 150px;
-    height: 150px;
-    border-radius: 6rem; 
-}
-.wallet-item-list-check{
-    background-image: url(../../assets/images/Homepage/check.png);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
-    width: 40px;
-    height: 40px;
-}
+
 
 .wallet-task-list-text{
     color:white;
@@ -76,10 +6,7 @@
     display:flex;
     align-items:center;
 }
-.wallet-binance{
-    width:40px;
-    height:40px;
-}
+
 .item-list-part{
     width: 100%;
     display: flex;
@@ -87,61 +14,12 @@
     align-items: center;
     
 }
-@media screen and (max-height: 755px) {
-    .wallet-picture-token-img{
-        width: 200px;
-        height: 200px;
-        border-radius: 80px;
-        background-image: radial-gradient(circle,#fff3bf, #ecd17f,  #53430A, #000000, #000000, #000000);
-        position:absolute;
-        z-index: 1;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    .wallet-token-img{
-        width: 80px;
-        height: 80px;
-        border-radius: 6rem; 
-    }
-    .wallet-item-list{
-        margin-top: 30px;
-        flex-direction: column;
-        width: 90%;
-        height: 50%;
-        display: flex;
-        justify-content: flex-start;
-    }
-    .connect-btn{
-        border-radius: 1rem;
-        background-color: #efb83e;
-        width: 100%;
-        height: 50px;
-        display:flex;
-        justify-content:space-around;
-        align-items:center; 
-    }
-    .connect-btn :hover{
-        background-color: #eea70e;
-    }
-}
-@media screen and (max-width: 525px) {
+
+@media screen and (max-width:350px) {
     .wallet-task-list-text{
         color:white;
-        font-size:17px;
+        font-size:13px;
         display:flex;
         align-items:center;
-    }
-    .wallet-binance{
-        width:30px;
-        height:30px;
-    }
-    .wallet-item-list-check{
-        background-image: url(../../assets/images/Homepage/check.png);
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: contain;
-        width: 30px;
-        height: 30px;
     }
 }
